@@ -27,7 +27,7 @@ body {
 }
 
 /* Hide scrollbar while keeping scroll functionality */
-.app::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
 
