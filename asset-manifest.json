@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.20cd88ce.css",
-    "main.js": "/portfolio-website/static/js/main.d897d02f.js",
-    "static/js/453.676b9ed8.chunk.js": "/portfolio-website/static/js/453.676b9ed8.chunk.js",
-    "static/media/my_profile_pic_noBg.png": "/portfolio-website/static/media/my_profile_pic_noBg.7f624ee604d0618b189b.png",
-    "static/media/Steffen_Kishore_Resume.pdf": "/portfolio-website/static/media/Steffen_Kishore_Resume.59c508cb772b45675aed.pdf",
-    "index.html": "/portfolio-website/index.html",
-    "main.20cd88ce.css.map": "/portfolio-website/static/css/main.20cd88ce.css.map",
-    "main.d897d02f.js.map": "/portfolio-website/static/js/main.d897d02f.js.map",
-    "453.676b9ed8.chunk.js.map": "/portfolio-website/static/js/453.676b9ed8.chunk.js.map"
+    "main.css": "/personal_portfolio/static/css/main.20cd88ce.css",
+    "main.js": "/personal_portfolio/static/js/main.cc2f20d7.js",
+    "static/js/453.676b9ed8.chunk.js": "/personal_portfolio/static/js/453.676b9ed8.chunk.js",
+    "static/media/my_profile_pic_noBg.png": "/personal_portfolio/static/media/my_profile_pic_noBg.7f624ee604d0618b189b.png",
+    "static/media/Steffen_Kishore_Resume.pdf": "/personal_portfolio/static/media/Steffen_Kishore_Resume.59c508cb772b45675aed.pdf",
+    "index.html": "/personal_portfolio/index.html",
+    "main.20cd88ce.css.map": "/personal_portfolio/static/css/main.20cd88ce.css.map",
+    "main.cc2f20d7.js.map": "/personal_portfolio/static/js/main.cc2f20d7.js.map",
+    "453.676b9ed8.chunk.js.map": "/personal_portfolio/static/js/453.676b9ed8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.20cd88ce.css",
-    "static/js/main.d897d02f.js"
+    "static/js/main.cc2f20d7.js"
   ]
 }
