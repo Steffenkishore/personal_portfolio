@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="hero-content">
         <p className="hero-tag">Full Stack Developer (MERN)</p>
         <h1>
-          Hi, I'm <span>Steffen R</span>
+          Hi, I'm <span>Steffen Kishore R</span>
         </h1>
         <p className="hero-subtitle">
           Tech enthusiast focused on MERN stack and back-end systems, building
