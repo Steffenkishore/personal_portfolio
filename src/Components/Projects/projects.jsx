@@ -12,7 +12,7 @@ const projects = [
       "Built a MERN stack web app with live result updates, secure multi-user access, and customizable polling interfaces.",
       "Integrated data visualization to convert responses into real-time insights for smarter decision-making.",
     ],
-    link: " https://askit-ashy.vercel.app/",
+    link: "https://askit-ashy.vercel.app/",
   },
   {
     title: "Live Movie Explorer App",
