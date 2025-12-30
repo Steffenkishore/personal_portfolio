@@ -3,7 +3,7 @@ import React from "react";
 import profile_pic from "../../assests/my_profile_pic_noBg.png";
 import resumePdf from "../../assests/Steffen_Kishore_Resume.pdf";
 
-const Hero = () => {
+const Home = () => {
   return (
     <section className="hero" id="home">
       <div className="hero-content">
@@ -62,4 +62,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;

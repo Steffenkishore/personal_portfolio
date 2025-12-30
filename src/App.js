@@ -4,7 +4,7 @@ import { Toaster } from "react-hot-toast";
 import "./App.css";
 import "./components.css";
 import About from "./Components/About/about";
-import Hero from "./Components/Hero/hero";
+import Home from "./Components/Home/home";
 import Education from "./Components/Education/education";
 import Skills from "./Components/Skills/skills";
 import Experience from "./Components/Experience/experience";
@@ -103,7 +103,7 @@ const App = () => {
       {/* Main Content */}
       <main>
         <Toaster position="top-right" reverseOrder={false} />
-        <Hero />
+        <Home />
         <About />
         <Education />
         <Skills />
