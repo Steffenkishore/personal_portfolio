@@ -12,7 +12,7 @@ const projects = [
       "Built a MERN stack web app with live result updates, secure multi-user access, and customizable polling interfaces.",
       "Integrated data visualization to convert responses into real-time insights for smarter decision-making.",
     ],
-    link: "https://poll-app-client.onrender.com",
+    link: " https://askit-ashy.vercel.app/",
   },
   {
     title: "Live Movie Explorer App",
@@ -24,7 +24,7 @@ const projects = [
       "Fetched and rendered live movie data using API integration with structured React components.",
       "Enabled users to view details, manage favorites, and navigate to official movie pages via clickable cards.",
     ],
-    link: "https://steffenkishore.github.io/movie-app",
+    link: "https://movie-app-ggql.vercel.app/",
   },
   {
     title: "Smart To-Do List Web App",
