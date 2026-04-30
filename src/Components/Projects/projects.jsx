@@ -3,7 +3,19 @@ import React from "react";
 
 const projects = [
   {
-    title: "Live Polling Web App",
+    title: "Church Management Desktop Web App",
+    date: "February 2026",
+    description:
+      "Built a full-stack Church Management System to digitize and centralize church operations.",
+    tech: "React.js, Node.js, Express.js, MongoDB",
+    points: [
+      "Implemented modules for managing members, equipment, finance, attendance, and other church operations. ",
+      "Solved the challenge of managing church operations manually by digitizing data into a centralized system ",
+    ],
+    link: "https://lwag-frontend-6vos.vercel.app/",
+  },
+  {
+    title: "AskIt - Live Polling Web App",
     date: "September 2025",
     description:
       "Real-time polling platform to create, share, and participate in live polls with instant visual analytics.",
@@ -25,18 +37,6 @@ const projects = [
       "Enabled users to view details, manage favorites, and navigate to official movie pages via clickable cards.",
     ],
     link: "https://movie-app-ggql.vercel.app/",
-  },
-  {
-    title: "Smart To-Do List Web App",
-    date: "January 2025",
-    description:
-      "Task management web app that helps users organize and track daily activities with persistence across sessions.",
-    tech: "HTML, CSS, JavaScript, Bootstrap",
-    points: [
-      "Implemented task creation, update, delete, and strike-through functionalities with an intuitive UI.",
-      "Used browser local storage to retain tasks even after page refresh.",
-    ],
-    link: "https://steffenkishore.github.io/Todo_App",
   },
 ];
 

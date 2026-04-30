@@ -46,7 +46,7 @@ const Contact = () => {
     }
   };
 
-  console.log("code is", process.env.REACT_APP_ACCESS_TOKEN);
+  console.log("access token is", process.env.REACT_APP_ACCESS_TOKEN);
 
   return (
     <section className="section" id="contact">
