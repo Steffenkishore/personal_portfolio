@@ -21,7 +21,7 @@ const Contact = () => {
     });
     const formData = new FormData(event.target);
 
-    formData.append("access_key",import.meta.env.VITE_WEB_ACCESS_TOKEN);
+    formData.append("access_key",process.env.REACT_APP_ACCESS_TOKEN);
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -45,6 +45,8 @@ const Contact = () => {
       toast.error("Error!");
     }
   };
+
+  console.log("code is", process.env.REACT_APP_ACCESS_TOKEN);
 
   return (
     <section className="section" id="contact">
