@@ -18,10 +18,10 @@ This portfolio is designed to present my work and capabilities as a full-stack d
 
 ## 🧠 Problem & Solution
 
-Problem:
+**Problem:**
 Recruiters often struggle to quickly evaluate a candidate’s complete profile across multiple platforms.
 
-Solution:
+**Solution:**
 This portfolio consolidates all essential information—projects, skills, and contact—into a single, accessible platform with a streamlined user experience.
 
 ## ⚙️ Tech Stack
