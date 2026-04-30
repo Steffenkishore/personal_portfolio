@@ -4,9 +4,13 @@ A modern, responsive personal portfolio website showcasing my projects, technica
 
 🔗 Live Demo: https://steffenkishore.github.io/personal_portfolio/
 
+---
+
 ## 📌 Overview
 
 This portfolio is designed to present my work and capabilities as a full-stack developer. It acts as a central hub where recruiters and collaborators can explore my projects, understand my technical strengths, and contact me directly.
+
+---
 
 ## 🎯 Key Features
 - Clean and responsive UI for all devices
@@ -16,6 +20,8 @@ This portfolio is designed to present my work and capabilities as a full-stack d
 - Real-time email notification using Web3Forms
 - Smooth navigation and user-friendly experience
 
+---
+
 ## 🧠 Problem & Solution
 
 **Problem:**
@@ -24,12 +30,16 @@ Recruiters often struggle to quickly evaluate a candidate’s complete profile a
 **Solution:**
 This portfolio consolidates all essential information—projects, skills, and contact—into a single, accessible platform with a streamlined user experience.
 
+---
+
 ## ⚙️ Tech Stack
 - React – Frontend development
 - JavaScript – Application logic
 - CSS – Styling and layout
 - HTML – Structure
 - Web3Forms – Contact form email handling
+
+---
 
 ## 📬 Contact Form Integration (Web3Form)
 
@@ -43,6 +53,8 @@ How it works:
 
 This eliminates the need for a custom backend while ensuring reliable communication.
 
+---
+
 ## 🛠️ Setup Instructions
 
 ```bash
@@ -52,17 +64,23 @@ npm install
 npm start
 ```
 
+---
+
 ## 🔐 Environment Variables
 
 Create a .env file in the root directory:
 
 <pre> REACT_APP_WEB_ACCESS_TOKEN=your_web3forms_access_key </pre>
 
+---
+
 ## 🔮 Future Improvements
 - Add dark/light theme toggle
 - Integrate analytics for visitor insights
 - Enhance animations and UI interactions
 - Add blog or technical articles section
+
+---
 
 # 📄 License
 This project is open-source and available for learning and reference purposes.
