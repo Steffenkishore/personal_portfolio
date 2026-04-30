@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# 👤 My Personal Portfolio 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive personal portfolio website showcasing my projects, technical skills, certifications, and providing a seamless way to get in touch.
 
-## Available Scripts
+🔗 Live Demo: https://steffenkishore.github.io/personal_portfolio/
 
-In the project directory, you can run:
+# 📌 Overview
 
-### `npm start`
+This portfolio is designed to present my work and capabilities as a full-stack developer. It acts as a central hub where recruiters and collaborators can explore my projects, understand my technical strengths, and contact me directly.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 🎯 Key Features
+- Clean and responsive UI for all devices
+- Project showcase with detailed information
+- Skills and certifications section
+- Direct contact form integration
+- Real-time email notification using Web3Forms
+- Smooth navigation and user-friendly experience
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 🧠 Problem & Solution
 
-### `npm test`
+Problem:
+Recruiters often struggle to quickly evaluate a candidate’s complete profile across multiple platforms.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Solution:
+This portfolio consolidates all essential information—projects, skills, and contact—into a single, accessible platform with a streamlined user experience.
 
-### `npm run build`
+# ⚙️ Tech Stack
+- React – Frontend development
+- JavaScript – Application logic
+- CSS – Styling and layout
+- HTML – Structure
+- Web3Forms – Contact form email handling
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 📬 Contact Form Integration (Web3Form)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The portfolio includes a functional contact form that allows users to send messages directly.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+How it works:
 
-### `npm run eject`
+- User fills out the contact form
+- Form data is sent to Web3Forms API
+- Email notification is triggered instantly
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This eliminates the need for a custom backend while ensuring reliable communication.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# 🛠️ Setup Instructions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/Steffenkishore/personal_portfolio.git
+cd personal_portfolio
+npm install
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# 🔐 Environment Variables
 
-## Learn More
+Create a .env file in the root directory:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<pre> REACT_APP_WEB_ACCESS_TOKEN=your_web3forms_access_key </pre>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# 🔮 Future Improvements
+- Add dark/light theme toggle
+- Integrate analytics for visitor insights
+- Enhance animations and UI interactions
+- Add blog or technical articles section
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 📄 License
+This project is open-source and available for learning and reference purposes.
