@@ -14,7 +14,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/personal_portfolio" element={<App />} />
+        <Route path="/" element={<App />} />
 
         <Route path="/projects" element={<AllProjects />} />
       </Routes>
