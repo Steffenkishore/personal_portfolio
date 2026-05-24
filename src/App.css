@@ -1,4 +1,4 @@
-/* src/App.css */
+/* src/App.css
 :root {
   --bg: #050816;
   --bg-alt: #0f172a;
@@ -26,7 +26,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Hide scrollbar while keeping scroll functionality */
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -38,7 +38,7 @@ body::-webkit-scrollbar {
   min-height: 100vh;
 }
 
-/* Navbar */
+
 .navbar {
   position: fixed;
   width:100%;
@@ -97,7 +97,7 @@ body::-webkit-scrollbar {
   width: 100%;
 }
 
-/* Hamburger Menu */
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -129,7 +129,7 @@ body::-webkit-scrollbar {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile Menu */
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -162,14 +162,13 @@ body::-webkit-scrollbar {
   background: rgba(34, 211, 238, 0.05);
 }
 
-/* Main Content */
+
 main {
   max-width: 1000px;
   margin: 0 auto;
   padding: 5rem 1.5rem 4rem;
 }
 
-/* Footer */
 .footer {
   text-align: center;
   padding: 1.5rem 1rem 2rem;
@@ -179,7 +178,7 @@ main {
   margin-top: 2rem;
 }
 
-/* Scroll to Top Button */
+
 .scroll-top-btn {
   position: fixed;
   bottom: 2rem;
@@ -215,7 +214,6 @@ main {
   transform: translateY(0);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   main {
     padding: 5rem 1rem 3rem;
@@ -225,12 +223,12 @@ main {
     padding: 1rem 1.5rem;
   }
 
-  /* Hide desktop nav on mobile */
+
   .navbar-nav {
     display: none;
   }
 
-  /* Show hamburger on mobile */
+
   .hamburger {
     display: flex;
   }
@@ -248,4 +246,4 @@ main {
   .logo {
     font-size: 1rem;
   }
-}
+} */

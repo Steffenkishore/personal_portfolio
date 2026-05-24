@@ -1,54 +1,97 @@
-// src/components/Experience.jsx
-import React from "react";
+/**
+ * Experience section component.
+ * Displays internship journey using
+ * cinematic alternating timeline cards.
+ */
 
-const Experience = () => {
+import "./experience.css";
+
+import { motion } from "framer-motion";
+
+import { experienceData } from "../../data/experience";
+
+function Experience() {
   return (
-    <section className="section" id="experience">
-      <h2 className="section-title">Experience & Training</h2>
+    <section className="experience" id="experience">
+      <div className="section-container">
+        {/* HEADER */}
+        <motion.div
+          className="experience__header"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
+        >
+          <p className="experience__subtitle">Experience</p>
 
-      <div className="card">
-        <h3>Fullstack Development (Training)</h3>
-        <p className="card-subtitle">
-          CCBP 4.0 Certification Program, NxtWave (online) | Jun 2022 - Present
-        </p>
-        <ul className="card-list">
-          <li>
-            Completed 3 years of intensive full-stack development training with
-            hands-on MERN stack projects.
-          </li>
-          <li>
-            Cleared multiple structured assessments, code reviews, and
-            industry-oriented practice modules.
-          </li>
-          <li>
-            Built real-world applications covering frontend, backend, REST APIs,
-            authentication, databases, and deployment workflows.
-          </li>
-        </ul>
-      </div>
+          <h2 className="experience__title">
+            Real-world engineering experience through embedded systems and IoT
+            development.
+          </h2>
 
-      <div className="card">
-        <h3>Embedded Systems Intern</h3>
-        <p className="card-subtitle">
-          TRIOS Tech Pvt Ltd, Chennai, Tamil Nadu | Jun 2025 - Jul 2025
-        </p>
-        <ul className="card-list">
-          <li>
-            Studied the basics of microcontrollers, embedded C coding, and
-            interface design.
-          </li>
-          <li>
-            Worked with sensors, actuators, and communication protocols such as
-            UART, I2C, and SPI.
-          </li>
-          <li>
-            Developed and tested basic embedded system prototypes through
-            hands-on training.
-          </li>
-        </ul>
+          <p className="experience__description">
+            Hands-on internship experiences focused on embedded systems,
+            microcontroller programming, hardware integration, and practical IoT
+            solution development.
+          </p>
+        </motion.div>
+
+        {/* TIMELINE */}
+        <div className="experience__timeline">
+          {experienceData.map((experience, index) => (
+            <motion.div
+              className="experience__item"
+              key={experience.company}
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{
+                duration: 0.8,
+                delay: index * 0.2,
+              }}
+            >
+              <div className="experience__dot"></div>
+
+              {/* META */}
+              <div className="experience__meta">
+                <span className="experience__period">{experience.period}</span>
+
+                <h3 className="experience__company">{experience.company}</h3>
+
+                <p className="experience__role">{experience.role}</p>
+
+                <p className="experience__location">{experience.location}</p>
+              </div>
+
+              {/* CARD */}
+              <motion.div
+                className="experience__card"
+                whileHover={{ y: -8 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 120,
+                }}
+              >
+                <p className="experience__card-description">
+                  {experience.description}
+                </p>
+
+                <div className="experience__highlights">
+                  {experience.highlights.map((highlight) => (
+                    <div className="experience__highlight" key={highlight}>
+                      <span className="experience__highlight-marker"></span>
+
+                      <p>{highlight}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
-};
+}
 
 export default Experience;

@@ -1,65 +1,124 @@
-// src/components/Hero.jsx
-import React from "react";
-import profile_pic from "../../assests/my_profile_pic_noBg.png";
+/**
+ * Hero section component.
+ * Displays whileInViewd introduction, CTA buttons,
+ * profile image, and social presence.
+ */
+
+import "./Home.css";
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaArrowRight } from "react-icons/fa";
+
+import profileImage from "../../assests/my_profile.png";
 import resumePdf from "../../assests/Steffen_Kishore_Resume.pdf";
 
-const Home = () => {
+function home() {
   return (
     <section className="hero" id="home">
-      <div className="hero-content">
-        <p className="hero-tag">Full Stack Developer (MERN)</p>
-        <h1>
-          Hi, I'm <span>Steffen Kishore R</span>
-        </h1>
-        <p className="hero-subtitle">
-          Tech enthusiast focused on MERN stack and back-end systems, building
-          reliable web applications and continuously upskilling.
-        </p>
-        <div className="hero-actions">
-          <a href="#projects" className="btn primary">
-            View Projects
-          </a>
-          <a
-            href={resumePdf}
-            download="Steffen_Kishore_Resume.pdf"
-            className="btn secondary"
+      <div className="hero__background-glow hero__background-glow--one"></div>
+      <div className="hero__background-glow hero__background-glow--two"></div>
+
+      <div className="hero__container section-container">
+        <motion.div
+          className="hero__content"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.4 }}
+          transition={{ duration: 0.9 }}
+        >
+          <motion.p
+            className="hero__subtitle"
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ delay: 0.1 }}
           >
-            Download Resume
-          </a>
-        </div>
-        <div className="hero-links">
-          <a
-            href="mailto:kishoresteffen@gmail.com"
-            target="_blank"
-            rel="noreferrer"
+            Full Stack Developer
+          </motion.p>
+
+          <motion.h1
+            className="hero__title"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.4 }}
+            transition={{ delay: 0.2 }}
           >
-            Email
-          </a>
-          <a
-            href="https://linkedin.com/in/steffenkishore"
-            target="_blank"
-            rel="noreferrer"
+            I'm Steffen Kishore R
+          </motion.h1>
+
+          <motion.p
+            className="hero__description"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.4 }}
+            transition={{ delay: 0.3 }}
           >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/Steffenkishore"
-            target="_blank"
-            rel="noreferrer"
+            MERN Stack Developer passionate about scalable web applications,
+            immersive UI experiences, and modern full-stack engineering.
+          </motion.p>
+
+          <motion.div
+            className="hero__actions"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ delay: 0.4 }}
           >
-            GitHub
-          </a>
-        </div>
-      </div>
-      <div className="profile-pic-con">
-        <img
-          src={profile_pic}
-          alt="profile_pic"
-          style={{ height: "500px", width: "auto" }}
-        />
+            <a href="#projects">
+              <button className="hero__primary-button">
+                View Projects
+                <FaArrowRight />
+              </button>
+            </a>
+
+            <a href={resumePdf} download="Steffen_Kishore_Resume.pdf">
+              <button className="hero__secondary-button">
+                Download Resume
+              </button>
+            </a>
+          </motion.div>
+
+          <motion.div
+            className="hero__socials"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ delay: 0.5 }}
+          >
+            <a
+              href="https://github.com/Steffenkishore "
+              target="_blank"
+              className="hero__social-link"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/steffenkishore"
+              target="_blank"
+              className="hero__social-link"
+            >
+              <FaLinkedin />
+            </a>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          className="hero__image-wrapper"
+          initial={{ opacity: 0, scale: 0.7, rotate: -4 }}
+          whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+          viewport={{ once: false, amount: 0.4 }}
+          transition={{
+            duration: 1,
+            type: "spring",
+            stiffness: 90,
+          }}
+        >
+          <div className="hero__image-card">
+            <img src={profileImage} alt="Profile" className="hero__image" />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
-};
+}
 
-export default Home;
+export default home;

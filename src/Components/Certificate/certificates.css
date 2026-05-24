@@ -1,0 +1,312 @@
+.learning {
+  position: relative;
+  padding: 8rem 0;
+  overflow: hidden;
+}
+
+.learning::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  bottom: -180px;
+  left: -180px;
+
+  background: rgba(124,58,237,0.12);
+
+  filter: blur(120px);
+
+  border-radius: 50%;
+}
+
+.learning__header {
+  margin-bottom: 5rem;
+}
+
+.learning__subtitle {
+  color: var(--color-secondary);
+
+  text-transform: uppercase;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 1rem;
+}
+
+.learning__title {
+  font-family: var(--font-heading);
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+
+  line-height: 1.1;
+
+  margin-bottom: 1rem;
+
+  max-width: 760px;
+}
+
+.learning__description {
+  color: var(--color-text-secondary);
+
+  line-height: 1.8;
+
+  max-width: 620px;
+}
+
+.learning__layout {
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 2rem;
+}
+
+.learning__course-card {
+  position: relative;
+
+  padding: 3rem;
+
+  border-radius: var(--radius-lg);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.03)
+    );
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  overflow: hidden;
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.25);
+
+  transition: var(--transition-default);
+}
+
+.learning__course-card:hover {
+  transform: translateY(-10px);
+}
+
+.learning__course-glow {
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  top: -80px;
+  right: -80px;
+
+  background: rgba(124,58,237,0.2);
+
+  filter: blur(80px);
+
+  border-radius: 50%;
+}
+
+.learning__course-provider {
+  display: inline-flex;
+
+  padding: 0.6rem 1rem;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  color: var(--color-secondary);
+
+  font-size: 0.85rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.learning__course-title {
+  position: relative;
+
+  font-family: var(--font-heading);
+
+  font-size: 2.2rem;
+
+  line-height: 1.2;
+
+  margin-bottom: 1rem;
+}
+
+.learning__course-duration {
+  color: var(--color-accent);
+
+  margin-bottom: 1.5rem;
+}
+
+.learning__course-description {
+  color: var(--color-text-secondary);
+
+  line-height: 1.9;
+
+  margin-bottom: 2rem;
+}
+
+.learning__section-label {
+  display: inline-block;
+
+  color: var(--color-secondary);
+
+  font-size: 0.8rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 1rem;
+}
+
+.learning__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+
+  margin-bottom: 2rem;
+}
+
+.learning__technology {
+  padding: 0.7rem 1rem;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  color: var(--color-text-secondary);
+
+  transition: var(--transition-default);
+}
+
+.learning__technology:hover {
+  background: rgba(124,58,237,0.18);
+
+  transform: translateY(-4px);
+}
+
+.learning__achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.learning__achievement {
+  display: flex;
+  gap: 1rem;
+
+  color: var(--color-text-secondary);
+
+  line-height: 1.7;
+}
+
+.learning__achievement-marker {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  margin-top: 0.5rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+}
+
+.learning__certificates {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.learning__certificate-card {
+  position: relative;
+
+  padding: 1.8rem;
+
+  border-radius: var(--radius-md);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.07),
+      rgba(255,255,255,0.03)
+    );
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  overflow: hidden;
+
+  backdrop-filter: blur(16px);
+
+  transition: var(--transition-default);
+}
+
+.learning__certificate-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(124,58,237,0.25);
+}
+
+.learning__certificate-date {
+  display: inline-block;
+
+  color: var(--color-secondary);
+
+  font-size: 0.82rem;
+
+  margin-bottom: 0.8rem;
+}
+
+.learning__certificate-title {
+  font-family: var(--font-heading);
+
+  font-size: 1.2rem;
+
+  line-height: 1.5;
+
+  margin-bottom: 0.8rem;
+}
+
+.learning__certificate-provider {
+  color: var(--color-text-secondary);
+
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .learning__layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .learning {
+    padding: 6rem 0;
+  }
+
+  .learning__course-card {
+    padding: 2rem;
+  }
+
+  .learning__course-title {
+    font-size: 1.8rem;
+  }
+}

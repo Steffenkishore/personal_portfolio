@@ -1,35 +1,65 @@
-// src/components/Skills.jsx
-import React from "react";
+/**
+ * Skills section component.
+ * Displays categorized technologies using
+ * responsive icon-card grids with staggered
+ * scroll-triggered animations.
+ */
 
-const SkillGroup = ({ title, items }) => (
-  <div className="skill-group">
-    <h3>{title}</h3>
-    <div className="skill-chips">
-      {items.map((item) => (
-        <span key={item} className="chip" style={{fontSize:"0.8rem"}}>
-          {item}
-        </span>
-      ))}
-    </div>
-  </div>
-);
+import "./skills.css";
 
-const Skills = () => {
+import { skillsData } from "../../data/skills";
+
+import useScrollAnimation from "../../hooks/useScrollAnimation";
+
+function Skills() {
+  const [sectionRef, isVisible] = useScrollAnimation(0.2);
+
   return (
-    <section className="section" id="skills">
-      <h2 className="section-title">Skills</h2>
-      <div className="skills-grid">
-        <SkillGroup
-          title="Front-end"
-          items={["HTML", "CSS", "JavaScript", "Bootstrap", "React.js"]}
-        />
-        <SkillGroup title="Back-end" items={["Node.js", "Express.js"]} />
-        <SkillGroup title="Database" items={["MongoDB", "SQL"]} />
-        <SkillGroup title="Programming Languages" items={["C++", "Python"]} />
-        <SkillGroup title="Tools & Platforms" items={["Git", "GitHub"]} />
+    <section className="skills__section" id="skills" ref={sectionRef}>
+      <div className="skills__container section-container">
+        {/* HEADING */}
+        <div className="skills__heading-wrapper">
+          <h2 className="skills__heading">Skills</h2>
+
+          <p className="skills__subtext">
+            Technologies I work with to build scalable, modern, and user-focused
+            web applications.
+          </p>
+        </div>
+
+        {/* SKILL GROUPS */}
+        {skillsData.map((group) => (
+          <div className="skills__group" key={group.category}>
+            <p className="skills__category-label">{group.category}</p>
+
+            <div className="skills__grid">
+              {group.skills.map((skill, index) => {
+                const IconComponent = skill.icon;
+
+                return (
+                  <div
+                    key={skill.name}
+                    className={`
+                      skills__card
+                      ${isVisible ? "skills__card--visible" : ""}
+                      ${group.isLearning ? "skills__card--learning" : ""}
+                    `}
+                    style={{
+                      transitionDelay: `${index * 50}ms`,
+                    }}
+                  >
+                    <IconComponent className="skills__icon" />
+
+                    <p className="skills__name">{skill.name}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
-};
+}
 
 export default Skills;

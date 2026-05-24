@@ -1,79 +1,114 @@
-// src/components/Projects.jsx
-import React from "react";
+/**
+ * Featured Projects section component.
+ * Displays selected portfolio projects
+ * with cinematic cards and live project links.
+ */
 
-const projects = [
-  {
-    title: "Church Management Desktop Web App",
-    date: "February 2026",
-    description:
-      "Built a full-stack Church Management System to digitize and centralize church operations.",
-    tech: "React.js, Node.js, Express.js, MongoDB",
-    points: [
-      "Implemented modules for managing members, equipment, finance, attendance, and other church operations. ",
-      "Solved the challenge of managing church operations manually by digitizing data into a centralized system ",
-    ],
-    link: "https://lwag-frontend-6vos.vercel.app/",
-  },
-  {
-    title: "AskIt - Live Polling Web App",
-    date: "September 2025",
-    description:
-      "Real-time polling platform to create, share, and participate in live polls with instant visual analytics.",
-    tech: "MERN Stack",
-    points: [
-      "Built a MERN stack web app with live result updates, secure multi-user access, and customizable polling interfaces.",
-      "Integrated data visualization to convert responses into real-time insights for smarter decision-making.",
-    ],
-    link: "https://askit-ashy.vercel.app/",
-  },
-  {
-    title: "Live Movie Explorer App",
-    date: "May 2025",
-    description:
-      "Dynamic movie listing app that displays real-time popular movies and lets users manage a favorites list.",
-    tech: "React.js, JavaScript, HTML, CSS",
-    points: [
-      "Fetched and rendered live movie data using API integration with structured React components.",
-      "Enabled users to view details, manage favorites, and navigate to official movie pages via clickable cards.",
-    ],
-    link: "https://movie-app-ggql.vercel.app/",
-  },
-];
+import "./projects.css";
 
-const Projects = () => {
+import { motion } from "framer-motion";
+
+import { FaArrowRight, FaExternalLinkAlt } from "react-icons/fa";
+
+import { featuredProjects } from "../../data/projects";
+
+function Projects() {
   return (
-    <section className="section" id="projects">
-      <h2 className="section-title">Projects</h2>
-      <div className="projects-grid">
-        {projects.map((project) => (
-          <div
-            key={project.title}
-            className="card project-card project-card-color"
-          >
-            <h3>{project.title}</h3>
-            <p className="card-subtitle">
-              {project.date} • {project.tech}
+    <section className="projects" id="projects">
+      <div className="section-container">
+        {/* HEADER */}
+        <motion.div
+          className="projects__header"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="projects__heading-content">
+            <p className="projects__subtitle">Featured Work</p>
+
+            <h2 className="projects__title">
+              Selected projects that showcase real-world engineering and product
+              thinking.
+            </h2>
+
+            <p className="projects__description">
+              A curated collection of projects focused on scalable architecture,
+              interactive user experiences, and practical problem-solving.
             </p>
-            <p>{project.description}</p>
-            <ul className="card-list">
-              {project.points.map((p) => (
-                <li key={p}>{p}</li>
-              ))}
-            </ul>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noreferrer"
-              className="project-link"
-            >
-              Live Demo →
-            </a>
           </div>
-        ))}
+
+          <motion.a
+            href="/projects"
+            className="projects__view-all"
+            whileHover={{ y: -4 }}
+            whileTap={{ scale: 0.96 }}
+          >
+            View All Projects
+            <FaArrowRight />
+          </motion.a>
+        </motion.div>
+
+        {/* PROJECTS */}
+        <div className="projects__grid">
+          {featuredProjects.map((project, index) => (
+            <motion.div
+              className="projects__card"
+              key={project.title}
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{
+                duration: 0.8,
+                delay: index * 0.15,
+              }}
+            >
+              {/* IMAGE */}
+              <div className="projects__image-wrapper">
+                <img
+                  src={project.screenshot}
+                  alt={project.title}
+                  className="projects__image"
+                />
+              </div>
+
+              {/* CONTENT */}
+              <div className="projects__content">
+                <h3 className="projects__card-title">{project.title}</h3>
+
+                <p className="projects__card-description">
+                  {project.description}
+                </p>
+
+                <div className="projects__points">
+                  {project.points.map((point) => (
+                    <div className="projects__point" key={point}>
+                      <span className="projects__point-marker"></span>
+
+                      <p>{point}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {project.liveLink && (
+                  <motion.a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="projects__live-link"
+                    whileHover={{ y: -3 }}
+                  >
+                    Live Preview
+                    <FaExternalLinkAlt />
+                  </motion.a>
+                )}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
-};
+}
 
 export default Projects;
-
