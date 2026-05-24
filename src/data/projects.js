@@ -222,7 +222,7 @@ export const allProjects = [
 
     featured: false,
 
-    liveLink: "numberfunfact.ccbp.tech",
+    liveLink: "https://numberfunfact.ccbp.tech/",
   },
 
   {
@@ -244,7 +244,7 @@ export const allProjects = [
 
     featured: false,
 
-    liveLink: "popofcountries.ccbp.tech",
+    liveLink: "https://popofcountries.ccbp.tech",
   },
 
   {
