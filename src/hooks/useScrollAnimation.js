@@ -1,16 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 
-/**
- * Custom hook for scroll-triggered animations
- * using Intersection Observer.
- */
-
 function useScrollAnimation(threshold = 0.2) {
   const elementRef = useRef(null);
 
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const element = elementRef.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
@@ -20,13 +17,13 @@ function useScrollAnimation(threshold = 0.2) {
       },
     );
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    if (element) {
+      observer.observe(element);
     }
 
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (element) {
+        observer.unobserve(element);
       }
     };
   }, [threshold]);

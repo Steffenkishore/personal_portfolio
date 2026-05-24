@@ -87,6 +87,7 @@ function home() {
             <a
               href="https://github.com/Steffenkishore "
               target="_blank"
+              rel="noreferrer"
               className="hero__social-link"
             >
               <FaGithub />
@@ -94,6 +95,7 @@ function home() {
             <a
               href="https://www.linkedin.com/in/steffenkishore"
               target="_blank"
+              rel="noreferrer"
               className="hero__social-link"
             >
               <FaLinkedin />

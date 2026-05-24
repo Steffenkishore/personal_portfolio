@@ -45,7 +45,7 @@ function AllProjects() {
             </p>
           </div>
 
-          <a href="/#projects" className="all-projects__back-button">
+          <a href="/personal_portfolio" className="all-projects__back-button">
             <FaArrowLeft />
             Go Back
           </a>
