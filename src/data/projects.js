@@ -2,6 +2,7 @@ import pollAppImage from "../assests/projectImages/poll-app.png";
 import movieAppImage from "../assests/projectImages/movie-app.png";
 import churchAppImage from "../assests/projectImages/church-app.png";
 import todoAppImage from "../assests/projectImages/todo-app.png";
+import todoAppReduxImage from "../assests/projectImages/todo-app-redux.png";
 import contactAppImage from "../assests/projectImages/contact-app.png";
 import countriesAppImage from "../assests/projectImages/country-app.png";
 import calculatorAppImage from "../assests/projectImages/calculator-app.png";
@@ -78,6 +79,28 @@ export const allProjects = [
     featured: true,
 
     liveLink: "https://movie-app-ggql.vercel.app/",
+  },
+
+  {
+    title: "Todo App - Redux State Management",
+
+    screenshot: todoAppReduxImage,
+
+    description:
+      "A simple task management application that allows users to add, complete, and delete tasks while exploring centralized state management using Redux Toolkit.",
+
+    points: [
+      "Built a Todo application with features to add, complete, and delete tasks using React and Redux Toolkit",
+      "Implemented centralized state management with Redux Toolkit and used Local Storage to persist tasks across page refreshes",
+    ],
+
+    techUsed: ["React", "Redux Toolkit", "React Redux", "Local Storage", "CSS"],
+
+    category: "React",
+
+    featured: false,
+
+    liveLink: "https://steffenkishore.github.io/todo-app-using-redux/",
   },
 
   {
